@@ -22,4 +22,5 @@ apps:
 parts:
   webserver:
     source: https://github.com/robotnyc/localtunnel.git
+    source-branch: snapcraft
     plugin: nodejs
