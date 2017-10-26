@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+# Create a default config file
+echo "port 8000" > "$SNAP_DATA/localtunnel.conf"
