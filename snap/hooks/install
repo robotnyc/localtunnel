@@ -2,3 +2,9 @@
 
 # Create a default config file
 echo "port 8000" > "$SNAP_DATA/$SNAP_NAME.conf"
+echo "#host \"http://localtunnel.me\"" >> "$SNAP_DATA/$SNAP_NAME.conf"
+echo "#subdomain [subdomain]" >> "$SNAP_DATA/$SNAP_NAME.conf"
+echo "#local-host [host]" >> "$SNAP_DATA/$SNAP_NAME.conf"
+
+exit 0
+

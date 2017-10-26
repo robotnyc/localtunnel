@@ -14,7 +14,7 @@ confinement: strict
 
 apps:
   node-service:
-    command: bin/lt --port "\"$(awk '/^port/{print $2}' \"$SNAP_DATA/$SNAP_NAME.conf\")\""
+    command: bin/lt --port "\"$(awk '/^port/{print $2}' \"$SNAP_DATA/$SNAP_NAME.conf\")\"" "\"$(awk '/^host/--host {print $2}' \"$SNAP_DATA/$SNAP_NAME.conf\")\"" "\"$(awk '/^subdomain/--subdomain {print $2}' \"$SNAP_DATA/$SNAP_NAME.conf\")\"" "\"$(awk '/^local-host/--local-host {print $2}' \"$SNAP_DATA/$SNAP_NAME.conf\")\""
     daemon: simple
     restart-condition: always
     plugs: [network-bind]
